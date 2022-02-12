@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@icons": ["utils/icons"],
+      "@localization": ["utils/localization"],
+      "@constants": ["utils/constants"],
+      "@helpers/*": ["utils/helpers/*"],
+      "@redux/*": ["utils/redux/*"],
+      "@redirects": ["utils/redirects"],
+      "@queries/*": ["graphql/queries/*"],
+      "@mutations/*": ["graphql/mutations/*"],
+      "@apollo-client": ["apollo-client"],
+      "@persistance": ["utils/persistance"],
+      "@performance": ["utils/performance"],
+      "@gh-classes": ["utils/helper-classes.js"],
+      "@variants": ["utils/variants.js"]
+    }
+  }
+}

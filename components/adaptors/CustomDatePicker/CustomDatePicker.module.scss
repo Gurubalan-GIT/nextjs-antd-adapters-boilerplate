@@ -1,0 +1,107 @@
+@import "@styles/design-system.scss";
+
+.customDatePicker {
+  .datePickerLabel {
+    display: block;
+    font-family: $open-sans;
+    font-size: $text-14;
+    font-weight: 600;
+    line-height: 22px;
+    color: $white;
+  }
+  .datePicker {
+    width: 100%;
+    margin: 4px 0;
+    padding: 8px 16px;
+    background: $grey-dark;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus {
+      border-color: $white;
+      outline: none;
+    }
+    &:hover {
+      border-color: $white;
+    }
+    &::-webkit-input-placeholder {
+      color: $white-text-disabled;
+    }
+    :global {
+      .ant-picker-input {
+        input {
+          font-family: $open-sans;
+          font-size: $text-16;
+          line-height: 24px;
+          color: $white;
+          cursor: pointer;
+        }
+        input::placeholder {
+          color: $white-text-disabled;
+        }
+        .ant-picker-suffix {
+          color: $white;
+          font-size: $text-12;
+        }
+      }
+    }
+  }
+}
+
+// DatePicker dropdown styles
+.datePickerDropdown {
+  :global {
+    .ant-picker-panel-container {
+      background-color: $grey-darker;
+      .ant-picker-panel {
+        border: none;
+        .ant-picker-header {
+          border-bottom: 1px solid $grey-light;
+          button {
+            color: $white-text-disabled;
+          }
+          .ant-picker-header-view {
+            color: $white;
+            button {
+              color: $white;
+              &:hover {
+                color: $primary-yellow-regular;
+              }
+            }
+          }
+        }
+        .ant-picker-body {
+          .ant-picker-content {
+            th {
+              color: $white;
+            }
+            .ant-picker-cell {
+              color: $white-text-disabled;
+            }
+            .ant-picker-cell-in-view {
+              color: $white;
+            }
+          }
+        }
+        .ant-picker-footer {
+          border-top: 1px solid $grey-light;
+          .ant-picker-today-btn {
+            color: $primary-yellow-regular;
+          }
+        }
+      }
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+      background: $primary-yellow-regular;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-today
+      .ant-picker-cell-inner::before {
+      border: 1px solid $primary-yellow-regular;
+    }
+    .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+    .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+      .ant-picker-cell-inner {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}

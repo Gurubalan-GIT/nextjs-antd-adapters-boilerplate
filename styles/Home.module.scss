@@ -1,0 +1,13 @@
+@import "@styles/design-system.scss";
+
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: $white-text-primary;
+  .buttonContainerHeader {
+    color: $white-text-primary;
+  }
+}

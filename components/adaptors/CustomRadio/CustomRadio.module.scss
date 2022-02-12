@@ -1,0 +1,107 @@
+@import "@styles/design-system.scss";
+
+// Radio Regular Style
+.customRadioRegular {
+  font-family: $open-sans;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+  &:hover {
+    :global {
+      .ant-radio-inner {
+        &::after {
+          top: 2px;
+          left: 1px;
+          width: 10px;
+          height: 10px;
+          background-color: $grey-light;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  :global {
+    .ant-radio {
+      .ant-radio-inner {
+        border: 1.5px solid $grey-light;
+        background-color: transparent;
+      }
+    }
+    .ant-radio-checked {
+      .ant-radio-inner {
+        border-color: $primary-blue-regular;
+        &::after {
+          top: 2px;
+          left: 1px;
+          width: 10px;
+          height: 10px;
+          background-color: $primary-blue-regular;
+        }
+      }
+    }
+  }
+  .helperText {
+    color: $white-text-disabled;
+    margin-left: 4px;
+  }
+}
+
+// Radio With Base Style
+.customRadioWithBase {
+  padding: 16px;
+  font-family: $open-sans;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+  border: 1px solid $grey-lightest;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  &.baseSelected {
+    background-color: $grey-dark;
+    border: 1px solid $primary-blue-regular;
+    &:hover {
+      background-color: $grey-dark;
+    }
+  }
+  &:hover {
+    background: rgba(35, 99, 178, 0.08);
+    :global {
+      .ant-radio-inner {
+        &::after {
+          top: 2px;
+          left: 2px;
+          width: 10px;
+          height: 10px;
+          background-color: $grey-light;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  :global {
+    .ant-radio {
+      .ant-radio-inner {
+        border: 1.5px solid $grey-light;
+        background-color: transparent;
+      }
+    }
+    .ant-radio-checked {
+      .ant-radio-inner {
+        border-color: $primary-blue-regular;
+        &::after {
+          top: 2px;
+          left: 2px;
+          width: 10px;
+          height: 10px;
+          background-color: $primary-blue-regular;
+        }
+      }
+    }
+  }
+  .helperText {
+    color: $white-text-disabled;
+    margin-left: 4px;
+  }
+}
